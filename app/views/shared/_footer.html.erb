@@ -25,11 +25,25 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <ul class="footer-navigation">
-          <li class="active"><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./catalog.html">Catalog</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><a href="./contact.html"><i class="fa fa-paper-plane"></i> Contact</a></li>
+          <li class="active">
+            <%= link_to 'Home', root_path %>
+          </li>
+          <li>
+            <%= link_to 'Store', shop_path %>
+          </li>
+          <li>
+            <%= link_to 'About', shop_path %>
+          </li>
+          <li>
+            <%= link_to root_path do %>
+              <i class="fa fa-paper-plane"></i> Contac
+            <% end %>
+          </li>
+          <li>
+            <%= link_to root_path, class: "menu-cart" do %>
+              <i class="fa fa-shopping-cart"></i> $0.00
+            <% end %>
+          </li>
         </ul>
         <ul class="accepted-payments">
           <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
